@@ -4,7 +4,7 @@
  * -------------------------------------------------------------------------
  * Mon plugin for GLPI
  * Copyright (C) 2026 Vincent GUILLOTTE
- * https://github.com/parime/glpi-plugin-template
+ * https://github.com/parime/glpi-telephony-inventory
  * -------------------------------------------------------------------------
  * LICENSE
  *
@@ -18,6 +18,7 @@
 use Glpi\Application\View\TemplateRenderer;
 use GlpiPlugin\Monplugin\Config;
 use GlpiPlugin\Monplugin\Menu;
+use GlpiPlugin\Monplugin\PluginVersion;
 
 // Page de configuration du plugin (Configuration > Plugins > Mon plugin) : le seul endroit où le
 // plugin se règle (charte section 9). Réservée au droit de configuration de GLPI.
@@ -30,9 +31,15 @@ if (isset($_POST['update'])) {
     Html::back();
 }
 
+$values = Config::load();
+// Encadré « Version du plugin » (charte section 9 bis) : clé du plugin et dépôt GitHub en paramètres.
+$pluginVersion = (new PluginVersion('monplugin', 'parime/glpi-telephony-inventory', PLUGIN_MONPLUGIN_VERSION))
+    ->status($values['version_check'] === '1');
+
 Html::header(Menu::getTypeName(), '', 'config', 'plugin');
 TemplateRenderer::getInstance()->display('@monplugin/config.html.twig', [
-    'values'  => Config::load(),
-    'version' => PLUGIN_MONPLUGIN_VERSION,
+    'values'         => $values,
+    'version'        => PLUGIN_MONPLUGIN_VERSION,
+    'plugin_version' => $pluginVersion,
 ]);
 Html::footer();
