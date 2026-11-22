@@ -2,3 +2,5 @@
 
 Merci de ne pas ouvrir d'issue publique : utilisez « Report a vulnerability » (onglet Security) pour un
 signalement privé. Réponse sous 7 jours.
+
+<!-- essai de la file de fusion par lots, PR C -->
