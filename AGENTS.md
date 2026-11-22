@@ -27,5 +27,3 @@ It is the single reference for every parime GLPI plugin.
 - User interface strings in English (msgid), translated in the 18 languages of `locales/`.
 - Fictitious data only in tests, screenshots and documentation. No em dash (U+2014).
 - Each pull request updates `CHANGELOG.md` (section `[Unreleased]`); commits and PRs in French.
-
-<!-- essai de la file de fusion par lots, PR A -->
