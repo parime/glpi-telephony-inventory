@@ -22,3 +22,5 @@ GPL-3.0-or-later: keep each file header and `NOTICE`, and cite the original proj
 ## Licence
 
 GPL-3.0-or-later, see [LICENSE](LICENSE).
+
+<!-- essai de la file de fusion par lots, PR A bis -->
