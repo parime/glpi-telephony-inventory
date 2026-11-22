@@ -260,3 +260,5 @@ revue pour les réglages.*
 Modifier la charte : PR sur ce dépôt (glpi-plugin-template), avec, si une règle devient
 vérifiable, son contrôle dans glpi-plugin-security (cas secbad/secgood) et une issue dans chaque
 plugin en écart. Une règle plus stricte arrive en avertissement pour une version, puis en bloquant.
+
+<!-- essai de la file de fusion par lots, PR B -->
